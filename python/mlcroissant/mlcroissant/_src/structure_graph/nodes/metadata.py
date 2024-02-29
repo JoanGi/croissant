@@ -409,7 +409,6 @@ class Metadata(Node):
             ctx.issues,
             metadata.get(constants.ML_COMMONS_RAI_DATA_COLLECTION_TIMEFRAME_END),
         )
-        print(constants.ML_COMMONS_RAI_DATA_PREPROCESSING_PROTOCOL)
         return cls(
             ctx=ctx,
             cite_as=cite_as,
