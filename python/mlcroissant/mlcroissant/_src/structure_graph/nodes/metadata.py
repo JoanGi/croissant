@@ -126,11 +126,11 @@ class Metadata(Node):
     data_annotation_protocol: str | None = None
     data_annotation_platform: str | None = None
     data_annotation_analysis: str | None = None
-    data_annotation_peritem: str | None = None
+    data_annotation_per_item: str | None = None
     data_annotation_demographics: str | None = None
     data_annotation_tools: str | None = None
     data_biases: str | None = None
-    data_usecases: str | None = None
+    data_use_cases: str | None = None
     data_limitation: str | None = None
     data_social_impact: str | None = None
     data_sensitive: str | None = None
@@ -210,12 +210,12 @@ class Metadata(Node):
             "rai:dataAnnotationProtocol": self.data_annotation_protocol,
             "rai:dataAnnotationPlatform": self.data_annotation_platform,
             "rai:dataAnnotationAnalysis": self.data_annotation_analysis,
-            "rai:dataAnnotationPerItem": self.data_annotation_peritem,
+            "rai:dataAnnotationPerItem": self.data_annotation_per_item,
             "rai:dataAnnotationDemographics": self.data_annotation_demographics,
             "rai:dataAnnotationTools": self.data_annotation_tools,
             "rai:dataBiases": self.data_biases,
-            "rai:dataUseCases": self.data_usecases,
-            "rai:dataLimitations": self.data_limitation,
+            "rai:dataUseCases": self.data_use_cases,
+            "rai:dataLimitation": self.data_limitation,
             "rai:dataSocialImpact": self.data_social_impact,
             "rai:dataSensitive": self.data_sensitive,
             "rai:dataMaintenance": self.data_maintenance,
@@ -409,6 +409,7 @@ class Metadata(Node):
             ctx.issues,
             metadata.get(constants.ML_COMMONS_RAI_DATA_COLLECTION_TIMEFRAME_END),
         )
+        print(constants.ML_COMMONS_RAI_DATA_PREPROCESSING_PROTOCOL)
         return cls(
             ctx=ctx,
             cite_as=cite_as,
@@ -450,7 +451,7 @@ class Metadata(Node):
             data_annotation_analysis=metadata.get(
                 constants.ML_COMMONS_RAI_DATA_ANNOTATION_ANALYSIS
             ),
-            data_annotation_peritem=metadata.get(
+            data_annotation_per_item=metadata.get(
                 constants.ML_COMMONS_RAI_DATA_ANNOTATION_PER_ITEM
             ),
             data_annotation_demographics=metadata.get(
@@ -460,7 +461,7 @@ class Metadata(Node):
                 constants.ML_COMMONS_RAI_DATA_ANNOTATION_TOOLS
             ),
             data_biases=metadata.get(constants.ML_COMMONS_RAI_DATA_BIASES),
-            data_usecases=metadata.get(constants.ML_COMMONS_RAI_DATA_USE_CASES),
+            data_use_cases=metadata.get(constants.ML_COMMONS_RAI_DATA_USE_CASES),
             data_limitation=metadata.get(constants.ML_COMMONS_RAI_DATA_LIMITATION),
             data_social_impact=metadata.get(
                 constants.ML_COMMONS_RAI_DATA_SOCIAL_IMPACT
